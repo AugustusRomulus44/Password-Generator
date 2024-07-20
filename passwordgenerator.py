@@ -12,8 +12,10 @@ root.title("Password Generator")
 root.geometry("400x45")
 
 
+# All the elements for the password(numbers, uppercase and lowercase letters)
 elements = "ABCDEFGHIOUPRSTQXZabcdefghiouprstqxz1234567890"
 
+# creates a password with a length of 12 digits by randomly choosing out of the elements above
 
 def pick_password():
     entry.delete(0, END)
@@ -25,15 +27,20 @@ def pick_password():
         user_password = user_password + random.choice(elements)
     return user_password
 
+# calls the function above and inserts it into the entry grid
 
 def generate():
     password1 = pick_password()
     entry.insert(10, password1)
 
+# Copy to clipboard
 
 def copy():
     generated_password = entry.get()
     pyperclip.copy(generated_password)
+
+
+# Generates a new password and stores it in a text file.
 
 def copy_to_data():
     stored_password = generate()
@@ -47,6 +54,8 @@ def copy_to_data():
 entry = Entry(root)
 entry.grid(row=0, column=1)
 
+
+# All the buttons for the functions.
 
 generate_button = Button(root, text="Generate", width=15, command=generate)
 generate_button.grid(row=0, column=3)
