@@ -44,7 +44,7 @@ def copy_to_data():
 
     filename = "passwords.txt"
     with open(filename, "a") as location:
-        location.write(entry2.get() + " ")
+        location.write(entry2.get() + ":" + " ")
     with open(filename, "a") as f:
         f.write(stored_password + "\n")
         f.close()
