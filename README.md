@@ -1,0 +1,1 @@
+Generates a 12-digit password consisting of all elements on the keyboard and the user can save a password into a text file and determine what the password is for. Obviously, this text file is very vulnerable and I advise writing down all your passwords on paper.
